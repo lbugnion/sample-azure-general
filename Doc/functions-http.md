@@ -5,7 +5,7 @@ Now that the application is created, let's add a Function. To do this, follow th
 1. Right click on the project in the Solution Explorer and select Add, New Item from the context menu.
 2. In the Add New Item dialog, select Azure Function. Give it a name and press Add.
 
-![Add New Item](/Pics/creating-testing-functions/2017-09-19_22-15-03.png)
+![Add New Item](/Doc/Img/creating-testing-functions/2017-09-19_22-15-03.png)
 
 ## HTTP trigger without parameter
 
@@ -13,7 +13,7 @@ You can select an HTTP trigger with or without parameters. Let's start without p
 
 3. In the New Azure Function dialog, select Http trigger.
 
-![New HTTP Trigger](/Pics/creating-testing-functions/2017-09-19_22-22-58.png)
+![New HTTP Trigger](/Doc/Img/creating-testing-functions/2017-09-19_22-22-58.png)
 
 Selecting "Http trigger" only will answer to a URL of the following form:
 
@@ -39,7 +39,7 @@ If you are handling a small number of simple parameters, you might prefer a URL 
 
 3. In the New Azure Function dialog, select Http trigger with parameters.
 
-![New HTTP Trigger with parameters](/Pics/creating-testing-functions/2017-09-21_10-25-15.png)
+![New HTTP Trigger with parameters](/Doc/Img/creating-testing-functions/2017-09-21_10-25-15.png)
 
 Selecting "Http trigger with parameters" will answer to a URL of the following form:
 
@@ -90,14 +90,14 @@ Here to you can use a POST request. This can be used for more complex parameters
 
 Once the Function is created, you can easily test it. In Visual Studio, place a breakpoint on the first line of the function you want to debug. Then press F5 to build and run your application in debug mode.
 
-![Debugging an Azure Function locally](/Pics/creating-testing-functions/2017-09-21_17-05-44.png)
+![Debugging an Azure Function locally](/Doc/Img/creating-testing-functions/2017-09-21_17-05-44.png)
 
 In the Azure Function console, find the local URL at the bottom.
 
-![Debugging an Azure Function locally](/Pics/creating-testing-functions/2017-09-21_17-07-17.png)
+![Debugging an Azure Function locally](/Doc/Img/creating-testing-functions/2017-09-21_17-07-17.png)
 
 Open your favorite web browser and copy this URL into the location bar. You need to replace the *{name}* with a real name, for instance Laurent. The breakpoint in your function should be hit and you can then step into your code and inspect it.
 
 Step through the code. When the function is done executing, you should see the following in your favorite web browser:
 
-![Function result in the web browser](/Pics/creating-testing-functions/2017-09-21_17-09-07.png)
+![Function result in the web browser](/Doc/Img/creating-testing-functions/2017-09-21_17-09-07.png)

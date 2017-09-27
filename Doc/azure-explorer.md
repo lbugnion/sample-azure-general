@@ -4,13 +4,13 @@ The Microsoft Azure Storage Explorer is a convenient Windows application that yo
 
 You can install [from this website](https://azure.microsoft.com/en-us/features/storage-explorer/). After you install the tool on your development machine, start the explorer.
 
-![Microsoft Azure Storage Explorer](./Pics/azure-explorer/2017-09-06_13-31-45.png)
+![Microsoft Azure Storage Explorer](/Doc/Img/azure-explorer/2017-09-06_13-31-45.png)
 
 1. Click on "Add an account".
 
 2. Select Azure from the combobox in the "Connect to Azure Storage" window, unless the account you want to use is stored elsewhere. Then press "Sign in".
 
-![Connect to Azure Storage](./Pics/azure-explorer/2017-09-06_13-37-02.png)
+![Connect to Azure Storage](/Doc/Img/azure-explorer/2017-09-06_13-37-02.png)
 
 3. Enter your account details. In case you still don't have an Azure account and an active subscription, [you can follow the steps here](trial-account.md).
 
@@ -18,8 +18,8 @@ You can install [from this website](https://azure.microsoft.com/en-us/features/s
 
 > **Note:** If you don't see your subscription, make sure that the Microsoft Azure Storage Explorer window is maximized.
 
-![Subscription in the Azure Explorer](./Pics/azure-explorer/2017-09-06_14-01-00.png)
+![Subscription in the Azure Explorer](/Doc/Img/azure-explorer/2017-09-06_14-01-00.png)
 
 5. You can now explore your data.
 
-![Data view in the Azure Explorer](./Pics/azure-explorer/2017-09-06_14-10-50.png)
+![Data view in the Azure Explorer](/Doc/Img/azure-explorer/2017-09-06_14-10-50.png)

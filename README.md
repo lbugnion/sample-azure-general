@@ -20,4 +20,4 @@ Your feedback is important to us! [Please don't hesitate to contact me on Twitte
 
 * The MVVM Light Toolkit <http://www.mvvmlight.net>
 
-![Presenting about Azure Functions](./Pics/readme/el20170902001.jpg)
+![Presenting about Azure Functions](/Doc/Img/readme/el20170902001.jpg)

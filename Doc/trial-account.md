@@ -8,7 +8,7 @@ The first step to get into Azure is to procure a Microsoft account (MSA). This i
 
 You can use outlook.com email addresses as MSA. To create a new email address, a good idea is to open a private web browser window. This will avoid issues with existing accounts in case you were already logged in. In Microsoft Edge, you can open a New InPrivate Window from the "…" menu on the top right. Then select the corresponding menu.
 
-![In-private browing](./Pics/trial-account/2017-08-31_13-14-57.png)
+![In-private browing](/Doc/Img/trial-account/2017-08-31_13-14-57.png)
 
 Then follow the steps:
 
@@ -42,17 +42,17 @@ On the left hand side of the portal, you will see a choice of services. We will 
 
 1. Locate the "Storage account" menu and select it.
 
-![Storage account menu](./Pics/trial-account/2017-08-31_13-49-28.png)
+![Storage account menu](/Doc/Img/trial-account/2017-08-31_13-49-28.png)
 
->**Note:** If you see only the icons in the left menu, you can expand it by using the "hamburger" menu on top of the icon list (![Hamburger menu](./Pics/trial-account//2017-09-04_23-57-17.png))
+>**Note:** If you see only the icons in the left menu, you can expand it by using the "hamburger" menu on top of the icon list (![Hamburger menu](/Doc/Img/trial-account//2017-09-04_23-57-17.png))
 
 2. Select the Add button on the top left corner.
 
-![Add a resource group](./Pics/trial-account/2017-09-06_11-17-14.png)
+![Add a resource group](/Doc/Img/trial-account/2017-09-06_11-17-14.png)
 
 3. If you already have a subscription, you can jump to step 3.3. Otherwise, you should see the image below. Click on the link titled "Sign up for a new subscription".
 
-![Sign up for a new subscription](./Pics/trial-account/2017-09-04_23-25-39.png)
+![Sign up for a new subscription](/Doc/Img/trial-account/2017-09-04_23-25-39.png)
 
 ### 3.2 Creating the subscription
 
@@ -78,7 +78,7 @@ If you have followed the steps under 3.2 above, and you created a new subscripti
 
 2. Select the subscription you want to use. If you just created a free subscription, it should be available in the combo box.
 
-![Creating the storage account](./Pics/trial-account/2017-09-06_11-22-17.png)
+![Creating the storage account](/Doc/Img/trial-account/2017-09-06_11-22-17.png)
 
 3. Enter a Resource group name. This will be where all the resources needed by your application will be grouped. This makes it easier to find resources.
 
@@ -86,4 +86,4 @@ If you have followed the steps under 3.2 above, and you created a new subscripti
 
 5. Click on the "Create" button at the bottom.
 
-![Finishing to create the storage account](./Pics/trial-account/2017-09-06_11-24-55.png)
+![Finishing to create the storage account](/Doc/Img/trial-account/2017-09-06_11-24-55.png)
