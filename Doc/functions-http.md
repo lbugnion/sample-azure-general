@@ -1,4 +1,4 @@
-# Creating an HTTP triggered function
+# Creating and testing an HTTP triggered function
 
 Now that the application is created, let's add a Function. To do this, follow the steps:
 

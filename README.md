@@ -10,6 +10,24 @@ Your feedback is important to us! [Please don't hesitate to contact me on Twitte
 >
 > &nbsp;
 
+## List of content:
+
+* [Creating a trial account and a storage account in Azure](/Doc/trial-account.md)
+
+* [Installing and configuring the Microsoft Azure Storage Explorer](/Doc/azure-explorer.md)
+
+* [Creating and testing Azure Functions in Visual Studio](/Doc/functions-creating-testing.md)
+
+    * [Creating and testing an HTTP triggered function](/Doc/functions-http.md)
+
+* Publishing an Azure Function to Azure from Visual Studio (work in progress)
+
+* [Vote on topics, work in progress!](/Doc/workinprogress.md)
+
+* [List of Azure samples](/Doc/samples.md)
+
+
+
 ## The following content might also interest you:
 
 * [About me](http://lbugnion.me)

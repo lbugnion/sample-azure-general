@@ -1,4 +1,4 @@
-# Vote on topics
+# Vote on topics, work in progress!
 
 > **Note** The voting system is not in place yet. At the moment this is a list of things I am looking at for documentation. [I'll blog](http://blog.galasoft.ch) and [tweet](http://twitter.com/lbugnion) as soon as the voting system is in place.
 
