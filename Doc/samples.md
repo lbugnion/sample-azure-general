@@ -1,5 +1,7 @@
 # List of Azure samples
 
+> **Note** This list is quite lean at the moment, but I just got started :) I expect to publish a lot more in the coming weeks and months, [so stay tuned](http://twitter.com/lbugnion)! You can also see a [list of things I am thinking of writing about here](/Doc/workinprogress.md).
+
 ## [CoinValue (Azure Functions, Serverless computing)](https://github.com/lbugnion/sample-azure-coinvalue)
 
 This sample shows two Azure Functions:

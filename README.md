@@ -6,7 +6,7 @@ Your feedback is important to us! [Please don't hesitate to contact me on Twitte
 
 > &nbsp;
 > 
-> **[Make sure to check the list of samples!](samples.md)**
+> **[Make sure to check the list of samples!](/Doc/samples.md)**
 >
 > &nbsp;
 
