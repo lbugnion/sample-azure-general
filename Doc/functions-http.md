@@ -21,15 +21,19 @@ Selecting "Http trigger" only will answer to a URL of the following form:
 
 You can pass parameters to the Function by sending a GET request with a query string. Accessing the parameter in the function will be done by using the [GetQueryNameValuePairs method](https://msdn.microsoft.com/en-us/library/system.net.http.httprequestmessageextensions.getquerynamevaluepairs.aspx) on the [HttpRequestMessage object](https://msdn.microsoft.com/en-us/library/system.net.http.httprequestmessage.aspx). For example:
 
-    // parse query parameter
-    string name = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
-        .Value;
+```CS
+// parse query parameter
+string name = req.GetQueryNameValuePairs()
+    .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
+    .Value;
+```
 
 Another way to pass parameters to the Function is to use a POST request. This can be used for more complex parameters, such as streams for images, videos, etc. Then you can access the parameter with:
 
-    // Get request body
-    dynamic data = await req.Content.ReadAsAsync<object>();
+```CS
+// Get request body
+dynamic data = await req.Content.ReadAsAsync<object>();
+```
 
 ## HTTP trigger with parameter
 
@@ -47,25 +51,27 @@ Selecting "Http trigger with parameters" will answer to a URL of the following f
 
 This type of URL is more elegant than the one with the query string. Accessing the parameter is quite easy: Simply declare it in the Function's signature:
 
-    public static class HttpParams
+```CS
+public static class HttpParams
+{
+    [FunctionName("HttpParams")]
+    public static HttpResponseMessage Run(
+        [HttpTrigger(
+            AuthorizationLevel.Function, 
+            "get", 
+            "post", 
+            Route = "HttpTriggerCSharp/name/{name}")]
+        HttpRequestMessage req, 
+        string name, 
+        TraceWriter log)
     {
-        [FunctionName("HttpParams")]
-        public static HttpResponseMessage Run(
-            [HttpTrigger(
-                AuthorizationLevel.Function, 
-                "get", 
-                "post", 
-                Route = "HttpTriggerCSharp/name/{name}")]
-            HttpRequestMessage req, 
-            string name, 
-            TraceWriter log)
-        {
-            log.Info("C# HTTP trigger function processed a request.");
+        log.Info("C# HTTP trigger function processed a request.");
 
-            // Fetching the name from the path parameter in the request URL
-            return req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
-        }
+        // Fetching the name from the path parameter in the request URL
+        return req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
     }
+}
+```
 
 In the code above (which is automatically created when you create the Function), notice the Route. This will answer to a URL of the form:
 
@@ -75,7 +81,9 @@ where {name} is the value of the name parameter.
 
 You can modify the route if you prefer. For instance:
 
-    Route = "hello/name/{name}"
+```
+Route = "hello/name/{name}"
+```
 
 In this case the URL will be:
 
@@ -83,8 +91,10 @@ In this case the URL will be:
 
 Here to you can use a POST request. This can be used for more complex parameters, such as streams for images, videos, etc and access the parameter with:
 
-    // Get request body
-    dynamic data = await req.Content.ReadAsAsync<object>();
+```CS
+// Get request body
+dynamic data = await req.Content.ReadAsAsync<object>();
+```
 
 # Running and testing the HTTP triggered function locally
 
