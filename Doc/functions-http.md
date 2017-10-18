@@ -89,7 +89,7 @@ In this case the URL will be:
 
 *http://myserver.com/api/hello/name/{name}*
 
-Here to you can use a POST request. This can be used for more complex parameters, such as streams for images, videos, etc and access the parameter with:
+Here too you can use a POST request. This can be used for more complex parameters, such as streams for images, videos, etc and access the parameter with:
 
 ```CS
 // Get request body
