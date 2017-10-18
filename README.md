@@ -20,6 +20,8 @@ Your feedback is important to us! [Please don't hesitate to contact me on Twitte
 
     * [Creating and testing an HTTP triggered function](/Doc/functions-http.md)
 
+    * [Creating and testing a Timer triggered function](/Doc/functions-timer.md)
+
 * Publishing an Azure Function to Azure from Visual Studio (work in progress)
 
 * [Vote on topics, work in progress!](/Doc/workinprogress.md)
