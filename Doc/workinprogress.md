@@ -30,8 +30,6 @@ Here are the topics I am thinking about at the moment:
 
 ### Creating and returning an image on the fly with Azure Functions
 
-This topic is [available here](TODO LINK).
-
 ### Implementing a simple voting system with Azure Functions, Azure Tables and Xamarin/Windows/Web
 
 ### Creating and testing Azure Functions in Visual Studio
