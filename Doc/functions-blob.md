@@ -12,7 +12,7 @@ As a prerequisite, you have of course to create a storage account in your Azure 
 
 2. In the Properties tab below, select the Primary Connection String.
 
-![Selecting the Primary Connection String](./img/creating-testing-functions/2017-11-14_11-54-15.png)
+![Selecting the Primary Connection String](./Img/creating-testing-functions/2017-11-14_11-54-15.png)
 
 3. In the Solution Explorer, open the file named "local.settings.json". This file should look like this:
 
@@ -32,7 +32,7 @@ As a prerequisite, you have of course to create a storage account in your Azure 
 
 6. Right click on the Blob Containers and select Create Blob Container.
 
-![Creating the new blob container](./img/creating-testing-functions/2017-11-14_12-05-20.png)
+![Creating the new blob container](./Img/creating-testing-functions/2017-11-14_12-05-20.png)
 
 7. Enter the blob container's name, for instance ```test-in```.
 
@@ -58,7 +58,7 @@ Now we need to enter a Connection for the input blob. In the previous section, w
 
 5. Enter the name of the blob container you created earlier (in our case, "test-in") in the Path property. Then press OK.
 
-![Creating the Blob triggered function](./img/creating-testing-functions/2017-11-15_07-23-08.png)
+![Creating the Blob triggered function](./Img/creating-testing-functions/2017-11-15_07-23-08.png)
 
 The created code should look something like this. Note that the values we entered for Connection and for the blob container path are directly accessible in the code, and can be edited if needed.
 
@@ -119,7 +119,7 @@ As mentioned, the code above is simply taking the input blob as a Stream and cop
 
 3. When the runtime is ready, you should see the console, looking like this:
 
-![The Azure Functions runtime console](./img/creating-testing-functions/2017-11-15_08-01-44.png)
+![The Azure Functions runtime console](./Img/creating-testing-functions/2017-11-15_08-01-44.png)
 
 4. Open the Microsoft Azure Storage Explorer and expand the Blob Containers under the storage account that you defined earlier.
 
@@ -127,11 +127,11 @@ As mentioned, the code above is simply taking the input blob as a Stream and cop
 
 6. Select "Upload" on the toolbar and then Upload files.
 
-![Blob container toolbar](./img/creating-testing-functions/2017-11-15_08-46-14.png)
+![Blob container toolbar](./Img/creating-testing-functions/2017-11-15_08-46-14.png)
 
 7. In the Upload files dialog, click on the `...` next to the Files field. This will open a file dualog where you can select the file. This can be any file such as an image, a PDF, a text file etc. Leave all the other files unchanged.
 
-![Upload files dialog](./img/creating-testing-functions/2017-11-15_08-49-05.png)
+![Upload files dialog](./Img/creating-testing-functions/2017-11-15_08-49-05.png)
 
 8. Press the Upload button. This will upload the file to the blob storage, and after a short while the debugger should break into the ```Run``` method.
 
