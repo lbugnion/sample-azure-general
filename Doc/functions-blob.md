@@ -81,31 +81,32 @@ The created code should look something like this. Note that the values we entere
 
 ## Defining the output
 
-At this stage, and before we perform a test, we will define the output blob where we will save the result of the operation. As mentioned earlier, saving the output as a blob is not an obligation, and we could do any kind of operation with this content. In this super simple sample, we will only copy the input blob as is to the output container, without any modification. Later you can of course modify this function to perform additional operations, for example resizing the image, extracting geotags, [creating a thumbnail](TODO_LINK), etc.
+At this stage, and before we perform a test, we will define the output blob where we will save the result of the operation. As mentioned earlier, saving the output as a blob is not an obligation, and we could do any kind of operation with this content. In this super simple sample, we will only copy the input blob as is to the output container, without any modification. Later you can of course modify this function to perform additional operations, for example resizing the image, extracting geotags, [creating a thumbnail](https://github.com/lbugnion/sample-azure-cognitive1), etc.
 
 1. Modify the function as follows. Note how we define the output blob storage directly in the code using the ```BlobAttribute``` class.
 
 ```CS
-  public static class BlobSample
-  {
-      [FunctionName("BlobSample")]
-      public static void Run(
-          [BlobTrigger(
-              "test-in/{name}", 
-              Connection = "AzureWebJobsStorage")]
-          Stream myBlob, 
-          string name, 
-          [Blob(
-              "test-out/{name}",
-              Connection = "AzureWebJobsStorage")]
-          Stream outBlob,
-          TraceWriter log)
-      {
-          log.Info($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+public static class BlobSample
+{
+    [FunctionName("BlobSample")]
+    public static void Run(
+        [BlobTrigger(
+            "test-in/{name}", 
+            Connection = "AzureWebJobsStorage")]
+        Stream myBlob, 
+        string name, 
+        [Blob(
+            "test-out/{name}",
+            FileAccess.Write,
+            Connection = "AzureWebJobsStorage")]
+        Stream outBlob,
+        TraceWriter log)
+    {
+        log.Info($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
 
-          myBlob.CopyTo(outBlob);
-      }
-  }
+        myBlob.CopyTo(outBlob);
+    }
+}
 ```
 
 ## Testing the function locally
@@ -122,4 +123,20 @@ As mentioned, the code above is simply taking the input blob as a Stream and cop
 
 4. Open the Microsoft Azure Storage Explorer and expand the Blob Containers under the storage account that you defined earlier.
 
-5. 
+5. Click on the ```test-in``` container.
+
+6. Select "Upload" on the toolbar and then Upload files.
+
+![Blob container toolbar](./img/creating-testing-functions/2017-11-15_08-46-14.png)
+
+7. In the Upload files dialog, click on the `...` next to the Files field. This will open a file dualog where you can select the file. This can be any file such as an image, a PDF, a text file etc. Leave all the other files unchanged.
+
+![Upload files dialog](./img/creating-testing-functions/2017-11-15_08-49-05.png)
+
+8. Press the Upload button. This will upload the file to the blob storage, and after a short while the debugger should break into the ```Run``` method.
+
+At this point, you can inspect the variables, note that the ```name``` parameter is showing the file's name, and that the ```myBlob``` stream is showing the correct length. Executing the function will copy the blob content as is to the output blob container.
+
+9. After executing the function, use the Microsoft Azure Storage Explorer to inspect the content of the ```test-out``` blob container. If everything went well, you should now see an exact copy of the file that you uploaded.
+
+> Did you know? You can double click on any file in the Azure Storage Explorer to download and open the file in question.
